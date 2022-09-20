@@ -8,9 +8,25 @@
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined;
+    - average([1, '2']) // Retorno: undefined ;
 */
 
-const average = () => {};
+const average = (meuArray) => {
+  let somaArray = 0;
+  let mediaArray = 0;
+  const comprimentoArray = meuArray.length;
+  if (meuArray.length < 1) {
+    return undefined;
+  }
+  for (let index = 0; index < meuArray.length; index += 1) {
+    if (typeof meuArray[index] !== 'number') {
+      return undefined;
+    } 
+      somaArray += meuArray[index];
+      mediaArray = somaArray / comprimentoArray;
+  }
+  return Math.round(mediaArray);
+};
+// console.log(average([1, 2, 3, 4, 5]));
 
 module.exports = average;
