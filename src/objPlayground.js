@@ -43,7 +43,7 @@ const calculator = (number1, number2) => {
   };
   result.sum = number1 + number2;
   result.mult = number1 * number2;
-  result.div = Math.floor(number1 / number2);
+  result.div = Math.trunc(number1 / number2);
   result.sub = number1 - number2;
   return result;
 };
